@@ -16,3 +16,4 @@ https://github.com/user-attachments/assets/720e27e3-3745-4e2b-9ed5-47ef8a1cad03
 ## Findings so far:
 
 1. Performance issues do not seem to be Angular-related, noticed the same in a vanilla JS project.
+2. Performance issues do not seem to be related to the JS logic of the mirador-textoverlay plugin. When I stop rendering the SVG parent container (`display: none`), the performance issues disappear. I'd say the issues are thus related to the rapid transform updates of the text overlay svg containers.
