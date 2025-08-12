@@ -2,10 +2,12 @@ import { Component, NgZone, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 // @ts-ignore
 import Mirador from 'mirador/dist/es/src/index';
+// @ts-ignore
+import textOverlayPlugin from 'mirador-textoverlay/es/index';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -17,11 +19,17 @@ export class App implements OnInit {
   ngOnInit() {
     this.ngZone.runOutsideAngular(async () => {
       const manifestUrl =
-        'https://iiif.io/api/cookbook/recipe/0001-mvm-image/manifest.json';
+        'https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11163886/manifest';
 
       const config = {
         id: 'mirador',
-
+        window: {
+          textOverlay: {
+            enabled: true,
+            selectable: false,
+            visible: true,
+          },
+        },
         windows: [
           {
             manifestId: manifestUrl,
@@ -29,7 +37,7 @@ export class App implements OnInit {
         ],
       };
 
-      const miradorInstance = Mirador.viewer(config);
+      Mirador.viewer(config, [...textOverlayPlugin]);
     });
   }
 }
