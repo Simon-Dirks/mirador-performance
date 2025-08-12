@@ -1,5 +1,7 @@
 # Mirador + Text Overlay Angular Performance Test
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Simon-Dirks/mirador-performance/tree/main/vanilla-js-vite)
+
 I noticed (minor) performance issues when using [Mirador](https://github.com/ProjectMirador/mirador) with the [mirador-textoverlay](https://github.com/dbmdz/mirador-textoverlay) plugin in another Angular project. This repository was created as a minimal sample environment to debug these issues.
 
 ```json
@@ -7,6 +9,7 @@ I noticed (minor) performance issues when using [Mirador](https://github.com/Pro
 "mirador-textoverlay": "^0.3.8",
 "react": "^16.14.0"
 ```
+
 
 ## Demo
 Video below showing zoom performance with OCR layer turned on and off in vanilla JS [demo](https://github.com/Simon-Dirks/mirador-performance/blob/main/vanilla-js-vite/src/main.js).
