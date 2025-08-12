@@ -1,0 +1,20 @@
+{
+  "name": "mirador-textoverlay-demo",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "mirador": "^3.4.3",
+    "mirador-textoverlay": "^0.3.8",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.2"
+  }
+}
